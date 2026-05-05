@@ -1,0 +1,279 @@
+/* ========================================
+   LABORATORIO DESIGN SYSTEM - LAYOUT
+   ======================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--color-background-page);
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Flex Utilities */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+
+/* Spacing Utilities */
+.m-0 { margin: var(--space-0); }
+.m-1 { margin: var(--space-1); }
+.m-2 { margin: var(--space-2); }
+.m-3 { margin: var(--space-3); }
+.m-4 { margin: var(--space-4); }
+.m-5 { margin: var(--space-5); }
+
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-5 { margin-top: var(--space-5); }
+.mt-6 { margin-top: var(--space-6); }
+
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-5 { margin-bottom: var(--space-5); }
+.mb-6 { margin-bottom: var(--space-6); }
+
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
+.p-4 { padding: var(--space-4); }
+.p-5 { padding: var(--space-5); }
+.p-6 { padding: var(--space-6); }
+
+.py-4 { padding-top: var(--space-4); padding-bottom: var(--space-4); }
+.py-6 { padding-top: var(--space-6); padding-bottom: var(--space-6); }
+.py-8 { padding-top: var(--space-8); padding-bottom: var(--space-8); }
+
+.px-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
+.px-5 { padding-left: var(--space-5); padding-right: var(--space-5); }
+
+/* Section */
+.section {
+  padding: var(--space-10) 0;
+}
+
+.section-title {
+  font-size: 29px;
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--color-text-high-contrast);
+  margin-bottom: var(--space-2);
+}
+
+.section-desc {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--color-text-caption);
+  margin-bottom: var(--space-6);
+}
+
+/* Header / Nav */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--color-brand-default);
+  border-bottom: none;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.header-logo {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--neutral-white);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.header-nav {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.header-nav a {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.header-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--neutral-white);
+}
+
+.header-nav a.is-active {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: var(--neutral-white);
+}
+
+/* Mobile menu */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-background-surface);
+  border-top: 1px solid var(--color-border-default);
+  padding: var(--space-6) 0;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-caption);
+}
+
+/* Code Snippet */
+.code-block {
+  background-color: var(--neutral-50);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--color-text-body);
+  overflow-x: auto;
+  margin-top: var(--space-3);
+}
+
+/* Demo Box */
+.demo-box {
+  background-color: var(--neutral-50);
+  border: 1px dashed var(--color-border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* Color Swatch */
+.color-swatch {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.color-swatch-preview {
+  width: 100%;
+  height: 64px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-default);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+  position: relative;
+}
+
+.color-swatch-preview:hover {
+  transform: scale(1.05);
+}
+
+.color-swatch-label {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 600;
+  color: var(--color-text-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.color-swatch-hex {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'SF Mono', Monaco, monospace;
+  color: var(--color-text-body);
+}
+
+/* Copy toast */
+.copy-toast {
+  position: fixed;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background-color: var(--base-black);
+  color: var(--neutral-white);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+  z-index: 200;
+}
+
+.copy-toast.is-visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}

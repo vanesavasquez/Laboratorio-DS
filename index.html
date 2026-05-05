@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio Design System</title>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/charts.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="header-logo">Laboratorio DS</a>
+      <nav class="header-nav">
+        <a href="#fundamentos" class="is-active">Fundamentos</a>
+        <a href="#tipografia">Tipografia</a>
+        <a href="#iconografia">Iconografia</a>
+        <a href="#botones">Botones</a>
+        <a href="#cards">Cards</a>
+        <a href="#formularios">Formularios</a>
+        <a href="#graficos">Graficos</a>
+        <a href="#ilustraciones">Ilustraciones</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#guia">Guia de Uso</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section style="padding: var(--space-16) 0; text-align: center; background-color: var(--color-background-primary);">
+      <div class="container">
+        <h1 style="font-size: 42px; line-height: 56px; font-weight: 700; color: var(--color-text-high-contrast); margin-bottom: var(--space-4);">
+          Laboratorio Design System
+        </h1>
+        <p class="body1" style="max-width: 600px; margin: 0 auto; color: var(--color-text-caption);">
+          Sistema de diseno completo para productos digitales. Tokens de color, tipografia Work Sans, componentes interactivos y guias de uso.
+        </p>
+      </div>
+    </section>
+
+    <!-- FUNDAMENTOS / COLORES -->
+    <section id="fundamentos" class="section">
+      <div class="container">
+        <h2 class="section-title">Fundamentos</h2>
+        <p class="section-desc">Paleta de colores primitivos y tokens semanticos. Haz clic en cualquier color para copiar su valor HEX.</p>
+
+        <!-- Tabs -->
+        <div style="display: flex; gap: var(--space-6); margin-bottom: var(--space-6); border-bottom: 1px solid var(--color-border-default);">
+          <button id="tab-primitivos" class="tab-btn is-active" onclick="switchTab('primitivos')" style="padding: var(--space-2) 0; background: none; border: none; border-bottom: 2px solid var(--color-brand-default); color: var(--color-brand-default); font-family: 'Work Sans', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer;">Primitivos</button>
+          <button id="tab-semanticos" class="tab-btn" onclick="switchTab('semanticos')" style="padding: var(--space-2) 0; background: none; border: none; border-bottom: 2px solid transparent; color: var(--color-text-caption); font-family: 'Work Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer;">Semanticos</button>
+        </div>
+
+        <!-- PRIMITIVOS -->
+        <div id="panel-primitivos">
+          <h3 class="h5 mb-4">Primary</h3>
+          <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-4); margin-bottom: var(--space-8);">
+            <div class="color-swatch-card" data-copy="#f4e2ef" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--primary-50);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">primary-50</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#f4e2ef</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#eac5e0" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--primary-100);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">primary-100</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#eac5e0</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#dfa8d1" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--primary-200);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">primary-200</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#dfa8d1</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#d48ac1" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--primary-300);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">primary-300</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#d48ac1</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#ca6db1" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--primary-400);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">primary-400</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#ca6db1</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#bf50a2" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--primary-500);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">primary-500</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#bf50a2</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#93367b" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--primary-600);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">primary-600</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#93367b</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#792c65" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--primary-700);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">primary-700</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#792c65</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#602350" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--primary-800);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">primary-800</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#602350</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#461a3a" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--primary-900);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">primary-900</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#461a3a</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="h5 mb-4">Secondary</h3>
+          <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-4); margin-bottom: var(--space-8);">
+            <div class="color-swatch-card" data-copy="#f5f7ff" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--secondary-50);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">secondary-50</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#f5f7ff</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#eceffe" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--secondary-100);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">secondary-100</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#eceffe</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#d8e0fd" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--secondary-200);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">secondary-200</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#d8e0fd</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#9daffa" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--secondary-300);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">secondary-300</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#9daffa</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#748ff8" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--secondary-400);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">secondary-400</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#748ff8</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#4c6ef6" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--secondary-500);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">secondary-500</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#4c6ef6</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#244df4" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--secondary-600);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">secondary-600</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#244df4</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#0c36e2" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--secondary-700);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">secondary-700</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#0c36e2</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#0a2db9" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--secondary-800);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">secondary-800</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#0a2db9</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#082391" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--secondary-900);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">secondary-900</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#082391</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#c5d0fc" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--secondary-brand-base);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">secondary-brand-base</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#c5d0fc</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="h5 mb-4">Neutral</h3>
+          <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-4); margin-bottom: var(--space-8);">
+            <div class="color-swatch-card" data-copy="#ffffff" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--neutral-white); border-bottom: 1px solid var(--color-border-default);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">neutral-white</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#ffffff</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#fafafa" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--neutral-50);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">neutral-50</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#fafafa</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#eaeaea" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--neutral-100);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">neutral-100</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#eaeaea</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#cfcece" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--neutral-200);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">neutral-200</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#cfcece</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#bab8b8" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--neutral-300);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">neutral-300</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#bab8b8</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#a5a1a1" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--neutral-400);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">neutral-400</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#a5a1a1</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#908b8b" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--neutral-500);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">neutral-500</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#908b8b</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#7a7474" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--neutral-600);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">neutral-600</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#7a7474</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#655f5f" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--neutral-700);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">neutral-700</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#655f5f</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#4e4949" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--neutral-800);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">neutral-800</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#4e4949</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#383434" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--neutral-900);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">neutral-900</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#383434</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="#0b0a0a" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer; transition: transform 0.15s;">
+              <div style="height: 80px; background-color: var(--base-black);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">base-black</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#0b0a0a</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEMANTICOS -->
+        <div id="panel-semanticos" style="display: none;">
+          <h3 class="h5 mb-4">Brand</h3>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-bottom: var(--space-8);">
+            <div class="color-swatch-card" data-copy="var(--color-brand-default)" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer;">
+              <div style="height: 80px; background-color: var(--color-brand-default);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">color-brand-default</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#bf50a2</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="var(--color-brand-hover)" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer;">
+              <div style="height: 80px; background-color: var(--color-brand-hover);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">color-brand-hover</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#93367b</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="var(--color-brand-pressed)" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer;">
+              <div style="height: 80px; background-color: var(--color-brand-pressed);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">color-brand-pressed</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#792c65</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="var(--color-brand-disabled)" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer;">
+              <div style="height: 80px; background-color: var(--color-brand-disabled);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">color-brand-disabled</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#d48ac1</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="h5 mb-4">Texto</h3>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-bottom: var(--space-8);">
+            <div class="color-swatch-card" data-copy="var(--color-text-body)" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer;">
+              <div style="height: 80px; background-color: var(--color-text-body);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">color-text-body</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#4e4949</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="var(--color-text-caption)" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer;">
+              <div style="height: 80px; background-color: var(--color-text-caption);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">color-text-caption</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#7a7474</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="var(--color-text-high-contrast)" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer;">
+              <div style="height: 80px; background-color: var(--color-text-high-contrast);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">color-text-high-contrast</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#383434</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="var(--color-text-disabled)" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer;">
+              <div style="height: 80px; background-color: var(--color-text-disabled);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">color-text-disabled</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#a5a1a1</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="h5 mb-4">Superficie</h3>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-bottom: var(--space-8);">
+            <div class="color-swatch-card" data-copy="var(--color-background-page)" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer;">
+              <div style="height: 80px; background-color: var(--color-background-page); border-bottom: 1px solid var(--color-border-default);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">color-background-page</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#ffffff</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="var(--color-background-surface)" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer;">
+              <div style="height: 80px; background-color: var(--color-background-surface);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">color-background-surface</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#fafafa</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="var(--color-border-default)" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer;">
+              <div style="height: 80px; background-color: var(--color-border-default);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">color-border-default</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#bab8b8</div>
+              </div>
+            </div>
+            <div class="color-swatch-card" data-copy="var(--color-divider-default)" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; cursor: pointer;">
+              <div style="height: 80px; background-color: var(--color-divider-default);"></div>
+              <div style="padding: var(--space-2) var(--space-3);">
+                <div style="font-size: 11px; font-weight: 600; color: var(--color-text-body); margin-bottom: 2px;">color-divider-default</div>
+                <div style="font-size: 10px; color: var(--color-text-caption); font-family: monospace;">#9daffa</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function switchTab(tab) {
+        const primitivosBtn = document.getElementById('tab-primitivos');
+        const semanticosBtn = document.getElementById('tab-semanticos');
+        const primitivosPanel = document.getElementById('panel-primitivos');
+        const semanticosPanel = document.getElementById('panel-semanticos');
+        
+        if (tab === 'primitivos') {
+          primitivosBtn.classList.add('is-active');
+          primitivosBtn.style.borderBottomColor = 'var(--color-brand-default)';
+          primitivosBtn.style.color = 'var(--color-brand-default)';
+          semanticosBtn.classList.remove('is-active');
+          semanticosBtn.style.borderBottomColor = 'transparent';
+          semanticosBtn.style.color = 'var(--color-text-caption)';
+          primitivosPanel.style.display = 'block';
+          semanticosPanel.style.display = 'none';
+        } else {
+          semanticosBtn.classList.add('is-active');
+          semanticosBtn.style.borderBottomColor = 'var(--color-brand-default)';
+          semanticosBtn.style.color = 'var(--color-brand-default)';
+          primitivosBtn.classList.remove('is-active');
+          primitivosBtn.style.borderBottomColor = 'transparent';
+          primitivosBtn.style.color = 'var(--color-text-caption)';
+          semanticosPanel.style.display = 'block';
+          primitivosPanel.style.display = 'none';
+        }
+      }
+    </script>
+
+    <hr class="divider">
+
+    <!-- TIPOGRAFIA -->
+    <section id="tipografia" class="section">
+      <div class="container">
+        <h2 class="section-title">Tipografia</h2>
+        <p class="section-desc">Familia Work Sans con escala completa de tamanos y pesos.</p>
+
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; line-height: 24px;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--color-border-default);">
+                <th style="text-align: left; padding: var(--space-3) var(--space-4); font-weight: 600; color: var(--color-text-caption); text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em; width: 100px;">Tipo</th>
+                <th style="text-align: left; padding: var(--space-3) var(--space-4); font-weight: 600; color: var(--color-text-caption); text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em; width: 120px;">Variante</th>
+                <th style="text-align: left; padding: var(--space-3) var(--space-4); font-weight: 600; color: var(--color-text-caption); text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em;">Ejemplo</th>
+                <th style="text-align: left; padding: var(--space-3) var(--space-4); font-weight: 600; color: var(--color-text-caption); text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em; width: 250px;">Uso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">h1</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">SemiBold · 42/56</td>
+                <td style="padding: var(--space-3) var(--space-4);"><h1 style="margin: 0; font-size: 42px; line-height: 56px;">Encabezado H1</h1></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Titulo principal, el mas grande.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">h2</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">SemiBold · 35/48</td>
+                <td style="padding: var(--space-3) var(--space-4);"><h2 style="margin: 0; font-size: 35px; line-height: 48px;">Encabezado H2</h2></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Titulo de seccion de alto nivel.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">h3</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">SemiBold · 29/32</td>
+                <td style="padding: var(--space-3) var(--space-4);"><h3 style="margin: 0; font-size: 29px; line-height: 32px;">Encabezado H3</h3></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Titulo de subseccion.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">h4</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">SemiBold · 24/32</td>
+                <td style="padding: var(--space-3) var(--space-4);"><h4 style="margin: 0; font-size: 24px; line-height: 32px;">Encabezado H4</h4></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Titulo de tarjeta o componente clave.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">h5</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">SemiBold · 20/24</td>
+                <td style="padding: var(--space-3) var(--space-4);"><h5 style="margin: 0; font-size: 20px; line-height: 24px;">Encabezado H5</h5></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Titulo de menor jerarquia.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">h6</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">SemiBold · 17/24</td>
+                <td style="padding: var(--space-3) var(--space-4);"><h6 style="margin: 0; font-size: 17px; line-height: 24px;">Encabezado H6</h6></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Titulo o encabezado pequeno.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">subtitle1</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">Medium · 14/24</td>
+                <td style="padding: var(--space-3) var(--space-4);"><p class="subtitle1" style="margin: 0;">Etiquetas en mayusculas</p></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Exportar a Hojas de calculo.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">subtitle2</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">Medium · 12/16</td>
+                <td style="padding: var(--space-3) var(--space-4);"><p class="subtitle2" style="margin: 0;">Etiquetas pequenas</p></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Exportar a Hojas de calculo.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">body1</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">Regular · 14/24</td>
+                <td style="padding: var(--space-3) var(--space-4);"><p class="body1" style="margin: 0;">Cuerpo de texto primario</p></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Cuerpo de texto primario y base del sistema.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">body2</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">Regular · 12/16</td>
+                <td style="padding: var(--space-3) var(--space-4);"><p class="body2" style="margin: 0;">Texto secundario</p></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Texto auxiliar, leyendas o cuerpo de texto secundario.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">body3</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">Italic · 12/16</td>
+                <td style="padding: var(--space-3) var(--space-4);"><p class="body3" style="margin: 0;">Texto en italica</p></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Texto auxiliar en italica.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">caption</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">Regular · 12/16</td>
+                <td style="padding: var(--space-3) var(--space-4);"><p class="caption" style="margin: 0;">Etiqueta auxiliar</p></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Etiqueta auxiliar, en mayusculas y con mucho espaciado.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-default);">
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">overline</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">SemiBold · 10/16</td>
+                <td style="padding: var(--space-3) var(--space-4);"><p class="overline" style="margin: 0;">Overline</p></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Etiqueta auxiliar, en mayusculas y con mucho espaciado.</td>
+              </tr>
+              <tr>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">button</td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-caption);">SemiBold · 14/24</td>
+                <td style="padding: var(--space-3) var(--space-4);"><button class="btn btn-primary btn-sm" style="margin: 0;">Button</button></td>
+                <td style="padding: var(--space-3) var(--space-4); color: var(--color-text-body);">Texto de boton.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ICONOGRAFIA -->
+    <section id="iconografia" class="section">
+      <div class="container">
+        <h2 class="section-title">Iconografia</h2>
+        <p class="section-desc">
+          Libreria oficial: <a href="https://fonts.google.com/icons" target="_blank" style="color: var(--color-brand-default); text-decoration: underline;">Material Design Icons</a>. Hace click en un icono para copiar su clase CSS.
+        </p>
+
+        <div class="form-group" style="max-width: 400px; margin-bottom: var(--space-6);">
+          <input type="text" id="icon-search" class="form-input" placeholder="Buscar icono... (ej: account, check, calendar)">
+        </div>
+
+        <div id="icon-grid" style="display: grid; grid-template-columns: repeat(9, 1fr); gap: var(--space-4);">
+          <!-- Fila 1 -->
+          <div class="icon-card" data-name="account" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">account</span>
+          </div>
+          <div class="icon-card" data-name="account-group" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">account-group</span>
+          </div>
+          <div class="icon-card" data-name="calendar-check" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V10h14v9zm-3.71-6.71L10 16.59l-2.29-2.3-1.42 1.42 3.71 3.71 6.42-6.42-1.42-1.41z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">calendar-check</span>
+          </div>
+          <div class="icon-card" data-name="calendar-month" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V10h14v9z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">calendar-month</span>
+          </div>
+          <div class="icon-card" data-name="check-circle" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">check-circle</span>
+          </div>
+          <div class="icon-card" data-name="close-circle" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">close-circle</span>
+          </div>
+          <div class="icon-card" data-name="alert" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">alert</span>
+          </div>
+          <div class="icon-card" data-name="alert-circle" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">alert-circle</span>
+          </div>
+          <div class="icon-card" data-name="information" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">information</span>
+          </div>
+
+          <!-- Fila 2 -->
+          <div class="icon-card" data-name="phone" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">phone</span>
+          </div>
+          <div class="icon-card" data-name="email" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">email</span>
+          </div>
+          <div class="icon-card" data-name="map-marker" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">map-marker</span>
+          </div>
+          <div class="icon-card" data-name="clock" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">clock</span>
+          </div>
+          <div class="icon-card" data-name="magnify" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">magnify</span>
+          </div>
+          <div class="icon-card" data-name="shield-check" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">shield-check</span>
+          </div>
+          <div class="icon-card" data-name="chart-bar" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">chart-bar</span>
+          </div>
+          <div class="icon-card" data-name="chart-line" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">chart-line</span>
+          </div>
+          <div class="icon-card" data-name="chart-pie" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M11 2v20c-5.07-.5-9-4.79-9-10s3.93-9.5 9-10zm2.03 0v8.99H22c-.47-4.74-4.24-8.52-8.97-8.99zm0 11.01V22c4.74-.47 8.5-4.25 8.97-8.99h-8.97z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">chart-pie</span>
+          </div>
+
+          <!-- Fila 3 -->
+          <div class="icon-card" data-name="trending-up" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">trending-up</span>
+          </div>
+          <div class="icon-card" data-name="file-document" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">file-document</span>
+          </div>
+          <div class="icon-card" data-name="delete" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">delete</span>
+          </div>
+          <div class="icon-card" data-name="pencil" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">pencil</span>
+          </div>
+          <div class="icon-card" data-name="plus" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">plus</span>
+          </div>
+          <div class="icon-card" data-name="chevron-down" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">chevron-down</span>
+          </div>
+          <div class="icon-card" data-name="chevron-right" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">chevron-right</span>
+          </div>
+          <div class="icon-card" data-name="menu" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">menu</span>
+          </div>
+          <div class="icon-card" data-name="home" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">home</span>
+          </div>
+
+          <!-- Fila 4 -->
+          <div class="icon-card" data-name="cog" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">cog</span>
+          </div>
+          <div class="icon-card" data-name="logout" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">logout</span>
+          </div>
+          <div class="icon-card" data-name="login" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M10 17.25V14H3v-4h7V6.75L15.25 12 10 17.25zM21 3h-9v2h9v14h-9v2h9c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">login</span>
+          </div>
+          <div class="icon-card" data-name="arrow-left" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">arrow-left</span>
+          </div>
+          <div class="icon-card" data-name="arrow-right" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">arrow-right</span>
+          </div>
+          <div class="icon-card" data-name="sync" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">sync</span>
+          </div>
+          <div class="icon-card" data-name="download" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">download</span>
+          </div>
+          <div class="icon-card" data-name="upload" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">upload</span>
+          </div>
+          <div class="icon-card" data-name="printer" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">printer</span>
+          </div>
+
+          <!-- Fila 5 -->
+          <div class="icon-card" data-name="share-variant" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">share-variant</span>
+          </div>
+          <div class="icon-card" data-name="star" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">star</span>
+          </div>
+          <div class="icon-card" data-name="heart" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">heart</span>
+          </div>
+          <div class="icon-card" data-name="bell" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">bell</span>
+          </div>
+          <div class="icon-card" data-name="message-text" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">message-text</span>
+          </div>
+          <div class="icon-card" data-name="camera" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 10.5l4.77-8.26C13.47 2.09 12.75 2 12 2c-2.4 0-4.6.85-6.32 2.25l3.66 6.35.06-.1zM21.54 9c-.93 0-1.82-.28-2.6-.76L16.2 12l3.74 3.74c.78-.48 1.67-.76 2.6-.76 1.93 0 3.64 1.03 4.6 2.57.24-.42.46-.87.64-1.33C26.1 11.5 24 9 21.54 9zM12 14.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5zM2 9c.93 0 1.82.28 2.6.76L7.8 12 4.06 8.26C3.28 8.74 2.39 9.02 1.46 9.02c-2.46 0-4.56 2.5-3.08 5.22.18.46.4.91.64 1.33C.64 13.28 1.35 10.78 2 9z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">camera</span>
+          </div>
+          <div class="icon-card" data-name="image" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">image</span>
+          </div>
+          <div class="icon-card" data-name="store" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">store</span>
+          </div>
+          <div class="icon-card" data-name="cart" style="background: var(--neutral-white); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--color-brand-default)'" onmouseout="this.style.borderColor='var(--color-border-default)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+            <span style="font-size: 11px; color: var(--color-text-caption); text-align: center;">cart</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- BOTONES -->
+    <section id="botones" class="section">
+      <div class="container">
+        <h2 class="section-title">Botones</h2>
+        <p class="section-desc">Componentes de accion interactivos. Estructura: icono escudo + label + chevron. Matriz de variantes y estados.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); margin-bottom: var(--space-8);">
+          <!-- Columna Primario -->
+          <div style="display: flex; flex-direction: column; gap: var(--space-4); align-items: center;">
+            <span class="overline">Primario</span>
+            <button class="btn btn-primary">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <button class="btn btn-primary" style="background-color: var(--color-brand-hover);">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <button class="btn btn-primary" style="background-color: var(--color-brand-pressed);">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <button class="btn btn-primary" disabled>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+          </div>
+
+          <!-- Columna Secundario -->
+          <div style="display: flex; flex-direction: column; gap: var(--space-4); align-items: center;">
+            <span class="overline">Secundario</span>
+            <button class="btn btn-secondary">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <button class="btn btn-secondary" style="background-color: var(--color-secondary-hover);">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <button class="btn btn-secondary" style="background-color: var(--color-secondary-pressed);">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <button class="btn btn-secondary" disabled>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+          </div>
+
+          <!-- Columna Outline -->
+          <div style="display: flex; flex-direction: column; gap: var(--space-4); align-items: center;">
+            <span class="overline">Outline</span>
+            <button class="btn btn-outline">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <button class="btn btn-outline" style="background-color: var(--color-background-primary);">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <button class="btn btn-outline" style="background-color: var(--primary-100);">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <button class="btn btn-outline" disabled>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+          </div>
+
+          <!-- Columna Text -->
+          <div style="display: flex; flex-direction: column; gap: var(--space-4); align-items: center;">
+            <span class="overline">Text</span>
+            <button class="btn btn-text">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <button class="btn btn-text" style="background-color: var(--color-background-primary);">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <button class="btn btn-text" style="background-color: var(--primary-100);">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <button class="btn btn-text" disabled>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- CARDS -->
+    <section id="cards" class="section">
+      <div class="container">
+        <h2 class="section-title">Cards</h2>
+        <p class="section-desc">Contenedores de informacion con diferentes propositos.</p>
+
+        <h3 class="h5 mb-4">Card Medico</h3>
+        <div class="grid grid-3" style="margin-bottom: var(--space-8);">
+          <div class="card-medico">
+            <div class="card-medico-header">
+              <div>
+                <div class="card-medico-nombre">Dra. Ana Martinez</div>
+                <div class="card-medico-especialidad">Cardiologia</div>
+                <div class="caption" style="margin-top: var(--space-1);">Av. Siempre Viva 742, Springfield</div>
+              </div>
+              <span class="badge badge-success">Activo</span>
+            </div>
+            <div class="card-medico-tags">
+              <span class="badge badge-outline">Especial</span>
+              <span class="badge badge-secondary">CPA</span>
+              <span class="badge badge-primary">Referente</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--space-2); margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--color-border-default);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-text-caption)"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V10h14v9zm0-11H5V5h14v3z"/></svg>
+              <span class="caption">Ultima visita: 12/03/2024</span>
+            </div>
+          </div>
+
+          <div class="card-medico">
+            <div class="card-medico-header">
+              <div>
+                <div class="card-medico-nombre">Dr. Carlos Lopez</div>
+                <div class="card-medico-especialidad">Dermatologia</div>
+                <div class="caption" style="margin-top: var(--space-1);">Calle Falsa 123, Buenos Aires</div>
+              </div>
+              <span class="badge badge-warning">Pendiente</span>
+            </div>
+            <div class="card-medico-tags">
+              <span class="badge badge-outline">Etico</span>
+              <span class="badge badge-secondary">CPA</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--space-2); margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--color-border-default);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-text-caption)"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V10h14v9zm0-11H5V5h14v3z"/></svg>
+              <span class="caption">Ultima visita: 28/02/2024</span>
+            </div>
+          </div>
+
+          <div class="card-medico">
+            <div class="card-medico-header">
+              <div>
+                <div class="card-medico-nombre">Dra. Lucia Fernandez</div>
+                <div class="card-medico-especialidad">Pediatria</div>
+                <div class="caption" style="margin-top: var(--space-1);">Av. del Libertador 5000, CABA</div>
+              </div>
+              <span class="badge badge-error">Inactivo</span>
+            </div>
+            <div class="card-medico-tags">
+              <span class="badge badge-outline">Especial</span>
+              <span class="badge badge-primary">Referente</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--space-2); margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--color-border-default);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-text-caption)"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V10h14v9zm0-11H5V5h14v3z"/></svg>
+              <span class="caption">Sin visitas recientes</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="h5 mb-4">Ejemplo de Mercado</h3>
+        <div class="card-mercado" style="max-width: 700px;">
+          <div class="card-mercado-header">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" style="color: var(--secondary-400);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <span class="card-mercado-title">Mercado Centro - Q1 2024</span>
+          </div>
+          <div class="card-mercado-body" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+            <div>
+              <div style="font-size: 14px; color: var(--color-text-caption); margin-bottom: var(--space-1);">Part. Inic.</div>
+              <div style="font-size: 24px; font-weight: 600; color: var(--color-text-high-contrast);">23%</div>
+            </div>
+            <div>
+              <div style="font-size: 14px; color: var(--color-text-caption); margin-bottom: var(--space-1);">Part. Act.</div>
+              <div style="font-size: 24px; font-weight: 600; color: var(--color-text-high-contrast);">23%</div>
+            </div>
+            <div>
+              <div style="font-size: 14px; color: var(--color-text-caption); margin-bottom: var(--space-1);">Evol.</div>
+              <div style="font-size: 24px; font-weight: 600; color: var(--success-500);">100</div>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-size: 14px; color: var(--color-text-caption); margin-bottom: var(--space-1);">Codigo</div>
+              <div style="font-size: 20px; font-weight: 600; color: var(--color-text-high-contrast);">TRAU- C 1</div>
+              <div style="font-size: 12px; color: var(--color-text-caption);">01/11/23</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- FORMULARIOS -->
+    <section id="formularios" class="section">
+      <div class="container">
+        <h2 class="section-title">Formularios</h2>
+        <p class="section-desc">Elementos de entrada de datos con estados y validacion.</p>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h4 class="h5 mb-4">Inputs</h4>
+            <div class="form-group">
+              <label class="form-label">Nombre completo</label>
+              <input type="text" class="form-input" placeholder="Ej: Maria Gonzalez">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Correo electronico</label>
+              <input type="email" class="form-input" placeholder="Ej: maria@ejemplo.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Con error</label>
+              <input type="text" class="form-input is-error" value="" placeholder="Campo requerido">
+              <span class="form-error">Este campo es obligatorio</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Deshabilitado</label>
+              <input type="text" class="form-input" value="Valor bloqueado" disabled>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="h5 mb-4">Selects y Checks</h4>
+            <div class="form-group">
+              <label class="form-label">Especialidad</label>
+              <select class="form-select">
+                <option value="">Seleccionar...</option>
+                <option value="cardio">Cardiologia</option>
+                <option value="derma">Dermatologia</option>
+                <option value="pedia">Pediatria</option>
+                <option value="neuro">Neurologia</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Notas</label>
+              <textarea class="form-textarea" rows="3" placeholder="Escribe tus observaciones..."></textarea>
+              <span class="form-helper">Maximo 500 caracteres</span>
+            </div>
+            <div class="form-group">
+              <label class="form-check">
+                <input type="checkbox" class="form-check-input" checked>
+                <span>Activo</span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="form-check">
+                <input type="checkbox" class="form-check-input">
+                <span>Notificaciones por email</span>
+              </label>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;">Guardar cambios</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- GRAFICOS -->
+    <section id="graficos" class="section">
+      <div class="container">
+        <h2 class="section-title">Graficos</h2>
+        <p class="section-desc">Componentes visuales de datos interactivos agrupados por libreria de implementacion.</p>
+
+        <!-- FLUTTER: fl_chart -->
+        <h3 class="h5 mb-4">Libreria Flutter — fl_chart</h3>
+        <div class="grid grid-3" style="margin-bottom: var(--space-8);">
+          <!-- 1. Line Chart -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div>
+                <div class="chart-card-title">Tendencia de visitas</div>
+                <div class="chart-card-subtitle">Enero — Julio 2024</div>
+              </div>
+            </div>
+            <div class="chart-line-container" data-points="12,19,15,25,22,30,28">
+              <svg viewBox="0 0 400 200">
+                <path class="chart-line-path" stroke="#BF50A2" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- 2. Bar Chart -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div>
+                <div class="chart-card-title">Participacion por region</div>
+                <div class="chart-card-subtitle">Datos inventados Q1 2024</div>
+              </div>
+            </div>
+            <div class="chart-bar">
+              <div class="chart-bar-item">
+                <div class="chart-bar-header">
+                  <span class="chart-bar-label">Norte</span>
+                  <span class="chart-bar-value">78%</span>
+                </div>
+                <div class="chart-bar-track">
+                  <div class="chart-bar-fill" style="--bar-value: 78%;" data-value="78%"></div>
+                </div>
+              </div>
+              <div class="chart-bar-item">
+                <div class="chart-bar-header">
+                  <span class="chart-bar-label">Centro</span>
+                  <span class="chart-bar-value">65%</span>
+                </div>
+                <div class="chart-bar-track">
+                  <div class="chart-bar-fill secondary" style="--bar-value: 65%;" data-value="65%"></div>
+                </div>
+              </div>
+              <div class="chart-bar-item">
+                <div class="chart-bar-header">
+                  <span class="chart-bar-label">Sur</span>
+                  <span class="chart-bar-value">42%</span>
+                </div>
+                <div class="chart-bar-track">
+                  <div class="chart-bar-fill success" style="--bar-value: 42%;" data-value="42%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Donut Chart -->
+          <div class="chart-card">
+            <div class="chart-card-header" style="justify-content: center;">
+              <div class="chart-card-title">Distribucion por especialidad</div>
+            </div>
+            <div style="display: flex; justify-content: center; margin-top: var(--space-2);">
+              <div class="chart-donut" data-default-value="45%" style="width: 140px; height: 140px;">
+                <svg viewBox="0 0 160 160">
+                  <circle class="chart-donut-track" cx="80" cy="80" r="60" style="stroke: #f3d9f0;"/>
+                  <circle class="chart-donut-segment" cx="80" cy="80" r="60" stroke-dasharray="170 377" stroke-dashoffset="0" data-value="45" style="stroke: #BF50A2; stroke-linecap: round;"/>
+                  <circle class="chart-donut-segment" cx="80" cy="80" r="60" stroke-dasharray="80 377" stroke-dashoffset="-170" data-value="30" style="stroke: #7B4397; stroke-linecap: round;"/>
+                  <circle class="chart-donut-segment" cx="80" cy="80" r="60" stroke-dasharray="127 377" stroke-dashoffset="-250" data-value="25" style="stroke: #d8b4d9; stroke-linecap: round;"/>
+                </svg>
+                <div class="chart-donut-center">
+                  <div class="chart-donut-value" style="color: #BF50A2;">45%</div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-stats" style="margin-top: var(--space-4);">
+              <div class="chart-stat">
+                <div class="chart-stat-value" style="color: #BF50A2;">45%</div>
+                <div class="chart-stat-label">Cardiologia</div>
+              </div>
+              <div class="chart-stat">
+                <div class="chart-stat-value" style="color: #7B4397;">30%</div>
+                <div class="chart-stat-label">Dermatologia</div>
+              </div>
+              <div class="chart-stat">
+                <div class="chart-stat-value" style="color: #9d7fb3;">25%</div>
+                <div class="chart-stat-label">Pediatria</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ANGULAR: ngx-charts -->
+        <h3 class="h5 mb-4">Libreria Angular — ngx-charts</h3>
+        <div class="grid grid-3">
+          <!-- 1. Area Chart -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div>
+                <div class="chart-card-title">Evolucion de mercado</div>
+                <div class="chart-card-subtitle">Ultimos 12 meses</div>
+              </div>
+            </div>
+            <div class="chart-area-container">
+              <svg viewBox="0 0 400 200" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="areaGradAngular" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4c6ef6" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#4c6ef6" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <line x1="0" y1="50" x2="400" y2="50" stroke="#eaeaea" stroke-width="1"/>
+                <line x1="0" y1="100" x2="400" y2="100" stroke="#eaeaea" stroke-width="1"/>
+                <line x1="0" y1="150" x2="400" y2="150" stroke="#eaeaea" stroke-width="1"/>
+                <path d="M0,160 C40,140 80,170 120,130 C160,90 200,110 240,70 C280,30 320,50 360,20 C380,5 400,10 400,10 L400,200 L0,200 Z" fill="url(#areaGradAngular)" />
+                <path d="M0,160 C40,140 80,170 120,130 C160,90 200,110 240,70 C280,30 320,50 360,20 C380,5 400,10 400,10" fill="none" stroke="#4c6ef6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="chart-stats" style="margin-top: var(--space-4);">
+              <div class="chart-stat">
+                <div class="chart-stat-value">+12%</div>
+                <div class="chart-stat-label">Crecimiento</div>
+              </div>
+              <div class="chart-stat">
+                <div class="chart-stat-value secondary">8.5M</div>
+                <div class="chart-stat-label">Volumen</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Grouped Bar Chart -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div>
+                <div class="chart-card-title">Comparativa trimestral</div>
+                <div class="chart-card-subtitle">Efectivas vs Programadas</div>
+              </div>
+            </div>
+            <div class="chart-grouped" style="height: 200px;">
+              <div class="chart-grouped-item">
+                <div class="chart-grouped-bar-wrapper">
+                  <div class="chart-grouped-bar" style="--bar-height: 80px;" data-value="80" data-category="efectivas"></div>
+                  <div class="chart-grouped-bar secondary" style="--bar-height: 110px;" data-value="110" data-category="programadas"></div>
+                </div>
+                <span class="chart-grouped-label">Q1</span>
+              </div>
+              <div class="chart-grouped-item">
+                <div class="chart-grouped-bar-wrapper">
+                  <div class="chart-grouped-bar" style="--bar-height: 100px;" data-value="100" data-category="efectivas"></div>
+                  <div class="chart-grouped-bar secondary" style="--bar-height: 130px;" data-value="130" data-category="programadas"></div>
+                </div>
+                <span class="chart-grouped-label">Q2</span>
+              </div>
+              <div class="chart-grouped-item">
+                <div class="chart-grouped-bar-wrapper">
+                  <div class="chart-grouped-bar" style="--bar-height: 120px;" data-value="120" data-category="efectivas"></div>
+                  <div class="chart-grouped-bar secondary" style="--bar-height: 140px;" data-value="140" data-category="programadas"></div>
+                </div>
+                <span class="chart-grouped-label">Q3</span>
+              </div>
+              <div class="chart-grouped-item">
+                <div class="chart-grouped-bar-wrapper">
+                  <div class="chart-grouped-bar" style="--bar-height: 90px;" data-value="90" data-category="efectivas"></div>
+                  <div class="chart-grouped-bar secondary" style="--bar-height: 115px;" data-value="115" data-category="programadas"></div>
+                </div>
+                <span class="chart-grouped-label">Q4</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Gauge Chart -->
+          <div class="chart-card" style="background-color: #e8eaf6; border: none;">
+            <div class="chart-card-header">
+              <div>
+                <div class="chart-card-title">Cobertura de visitas</div>
+                <div class="chart-card-subtitle">Meta anual</div>
+              </div>
+            </div>
+            <div class="chart-gauge">
+              <svg viewBox="0 0 160 160">
+                <circle class="chart-gauge-track" cx="80" cy="80" r="70" stroke-dasharray="330 440" transform="rotate(135 80 80)" style="stroke: #c5cae9;"/>
+                <circle class="chart-gauge-fill" cx="80" cy="80" r="70" stroke-dasharray="330 440" transform="rotate(135 80 80)" style="--gauge-value: 250; stroke: #4c6ef6;"/>
+              </svg>
+              <div class="chart-gauge-center">
+                <div class="chart-gauge-value" style="color: #4c6ef6;">75%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ILUSTRACIONES -->
+    <section id="ilustraciones" class="section">
+      <div class="container">
+        <h2 class="section-title">Ilustraciones</h2>
+        <p class="section-desc">Ilustraciones de <a href="https://undraw.co/illustrations" target="_blank" rel="noopener noreferrer" style="color: var(--color-brand-default); text-decoration: underline;">unDraw</a> personalizadas con el color secundario del sistema.</p>
+
+        <div class="grid grid-3" style="gap: var(--space-6);">
+          <div class="illustration-card">
+            <div class="illustration-img">
+              <img src="assets/illustrations/studying-science.svg" alt="Studying Science" loading="lazy">
+            </div>
+            <div class="illustration-caption">Studying Science</div>
+          </div>
+          <div class="illustration-card">
+            <div class="illustration-img">
+              <img src="assets/illustrations/analyze.svg" alt="Analyze" loading="lazy">
+            </div>
+            <div class="illustration-caption">Analyze</div>
+          </div>
+          <div class="illustration-card">
+            <div class="illustration-img">
+              <img src="assets/illustrations/collaboration.svg" alt="Collaboration" loading="lazy">
+            </div>
+            <div class="illustration-caption">Collaboration</div>
+          </div>
+          <div class="illustration-card">
+            <div class="illustration-img">
+              <img src="assets/illustrations/data-input.svg" alt="Data Input" loading="lazy">
+            </div>
+            <div class="illustration-caption">Data Input</div>
+          </div>
+          <div class="illustration-card">
+            <div class="illustration-img">
+              <img src="assets/illustrations/growth-chart.svg" alt="Growth Chart" loading="lazy">
+            </div>
+            <div class="illustration-caption">Growth Chart</div>
+          </div>
+          <div class="illustration-card">
+            <div class="illustration-img">
+              <img src="assets/illustrations/certification.svg" alt="Certification" loading="lazy">
+            </div>
+            <div class="illustration-caption">Certification</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- FEEDBACK -->
+    <section id="feedback" class="section">
+      <div class="container">
+        <h2 class="section-title">Feedback</h2>
+        <p class="section-desc">Mensajes de estado y componentes de retroalimentacion.</p>
+
+        <h3 class="h5 mb-4">Alertas</h3>
+        <div style="display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-8);">
+          <div class="alert alert-success">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <div>
+              <strong>Operacion exitosa</strong>
+              <p class="body2" style="margin: 0;">Los cambios han sido guardados correctamente en el sistema.</p>
+            </div>
+          </div>
+          <div class="alert alert-error">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+            <div>
+              <strong>Error de conexion</strong>
+              <p class="body2" style="margin: 0;">No se pudo establecer conexion con el servidor. Intenta nuevamente.</p>
+            </div>
+          </div>
+          <div class="alert alert-warning">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+            <div>
+              <strong>Atencion requerida</strong>
+              <p class="body2" style="margin: 0;">Hay campos pendientes de validacion antes de continuar.</p>
+            </div>
+          </div>
+          <div class="alert alert-info">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <div>
+              <strong>Informacion util</strong>
+              <p class="body2" style="margin: 0;">Puedes consultar el manual de usuario para mas detalles.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="h5 mb-4">Badges</h3>
+        <div class="demo-box">
+          <span class="badge badge-primary">Primario</span>
+          <span class="badge badge-secondary">Secundario</span>
+          <span class="badge badge-outline">Outline</span>
+          <span class="badge badge-success">Exito</span>
+          <span class="badge badge-error">Error</span>
+          <span class="badge badge-warning">Advertencia</span>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- GUIA DE USO -->
+    <section id="guia" class="section">
+      <div class="container">
+        <h2 class="section-title">Guia de Uso</h2>
+        <p class="section-desc">Principios y buenas practicas para aplicar el sistema de diseno.</p>
+
+        <div class="grid grid-2" style="gap: var(--space-6);">
+          <div class="card">
+            <h4 class="h5 mb-3">Colores Semanticos</h4>
+            <ul style="display: flex; flex-direction: column; gap: var(--space-3); color: var(--color-text-body); font-size: 14px; line-height: 24px; padding-left: var(--space-4);">
+              <li><strong>--color-brand-default:</strong> Botones primarios, links y acciones clave.</li>
+              <li><strong>--color-text-body:</strong> Parrafos y texto de lectura larga.</li>
+              <li><strong>--color-text-high-contrast:</strong> Titulares H1-H3 y estados activos.</li>
+              <li><strong>--color-text-caption:</strong> Metadatos, fechas y textos de ayuda.</li>
+              <li><strong>--color-background-surface:</strong> Tarjetas, modales y contenedores.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4 class="h5 mb-3">Jerarquia Tipografica</h4>
+            <ul style="display: flex; flex-direction: column; gap: var(--space-3); color: var(--color-text-body); font-size: 14px; line-height: 24px; padding-left: var(--space-4);">
+              <li><strong>H1-H2:</strong> Titulos de pagina y secciones principales.</li>
+              <li><strong>H3-H4:</strong> Subtitulos de componentes y tarjetas.</li>
+              <li><strong>H5-H6:</strong> Titulos menores dentro de cards y paneles.</li>
+              <li><strong>Body1:</strong> Texto principal de formularios y lectura.</li>
+              <li><strong>Caption:</strong> Leyendas, metadatos y textos de soporte.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4 class="h5 mb-3">Do's</h4>
+            <ul style="display: flex; flex-direction: column; gap: var(--space-3); color: var(--color-text-body); font-size: 14px; line-height: 24px; padding-left: var(--space-4);">
+              <li>Usa siempre la fuente Work Sans para mantener consistencia.</li>
+              <li>Utiliza tokens semanticos en lugar de valores hardcodeados.</li>
+              <li>Mantene un radio de borde coherente (--radius-md para inputs, --radius-full para botones).</li>
+              <li>Provee feedback visual en todos los estados interactivos.</li>
+              <li>Respeta los espaciados del sistema (--space-4 como base).</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4 class="h5 mb-3">Don'ts</h4>
+            <ul style="display: flex; flex-direction: column; gap: var(--space-3); color: var(--color-text-body); font-size: 14px; line-height: 24px; padding-left: var(--space-4);">
+              <li>No combines mas de dos pesos de fuente en una misma pantalla.</li>
+              <li>No uses colores fuera de la paleta definida.</li>
+              <li>No crees bordes con colores que no sean neutros o semanticos.</li>
+              <li>No ignores los estados disabled en formularios.</li>
+              <li>No reduzcas el contraste por debajo de los estandares WCAG AA.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card mt-5">
+          <h4 class="h5 mb-3">Accesibilidad</h4>
+          <p class="body1">Todos los componentes cumplen con criterios de contraste WCAG AA. Se recomienda verificar el contraste de texto sobre fondos personalizados antes de implementar. Los estados focus son visibles y utilizan el anillo de foco definido en --shadow-focus.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Ultima actualizacion: Mayo 2024 | Vanesa Vasquez</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/copy-to-clipboard.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/charts.js"></script>
+</body>
+</html>

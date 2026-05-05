@@ -1,0 +1,388 @@
+/* ========================================
+   LABORATORIO DESIGN SYSTEM - CHARTS
+   ======================================== */
+
+/* ----------------------------------------
+   GAUGE / DONUT CHART
+   ---------------------------------------- */
+
+.chart-gauge {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+}
+
+.chart-gauge svg {
+  width: 100%);
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.chart-gauge-track {
+  fill: none;
+  stroke: var(--neutral-200);
+  stroke-width: 16;
+  stroke-linecap: round;
+}
+
+.chart-gauge-fill {
+  fill: none;
+  stroke: var(--color-brand-default);
+  stroke-width: 16;
+  stroke-linecap: round;
+  stroke-dasharray: 0 471;
+  transition: stroke-dasharray 1s ease-out;
+}
+
+.chart-gauge-fill.is-animated {
+  stroke-dasharray: var(--gauge-value) 471;
+}
+
+.chart-gauge-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.chart-gauge-value {
+  font-size: 35px;
+  line-height: 48px;
+  font-weight: 700;
+  color: var(--color-brand-default);
+}
+
+.chart-gauge-label {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-caption);
+}
+
+/* Gauge Variants */
+.chart-gauge-fill.success {
+  stroke: var(--success-500);
+}
+
+.chart-gauge-fill.secondary {
+  stroke: var(--color-secondary-default);
+}
+
+.chart-gauge-value.success {
+  color: var(--success-500);
+}
+
+.chart-gauge-value.secondary {
+  color: var(--color-secondary-default);
+}
+
+/* ----------------------------------------
+   DONUT CHART (Multi-segment)
+   ---------------------------------------- */
+
+.chart-donut {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+}
+
+.chart-donut svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.chart-donut-track {
+  fill: none;
+  stroke: var(--neutral-200);
+  stroke-width: 20;
+}
+
+.chart-donut-segment {
+  fill: none;
+  stroke-width: 20;
+  stroke-linecap: round;
+  transition: stroke-dasharray 1s ease-out;
+}
+
+.chart-donut-segment.primary { stroke: var(--color-brand-default); }
+.chart-donut-segment.secondary { stroke: var(--color-secondary-default); }
+.chart-donut-segment.success { stroke: var(--success-500); }
+.chart-donut-segment.warning { stroke: var(--warning-500); }
+.chart-donut-segment.neutral { stroke: var(--neutral-300); }
+
+.chart-donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.chart-donut-value {
+  font-size: 29px;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--color-text-high-contrast);
+}
+
+.chart-donut-sublabel {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-caption);
+}
+
+/* ----------------------------------------
+   BAR CHART
+   ---------------------------------------- */
+
+.chart-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.chart-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.chart-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chart-bar-label {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--color-text-body);
+}
+
+.chart-bar-value {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--color-text-high-contrast);
+}
+
+.chart-bar-track {
+  width: 100%;
+  height: 12px;
+  background-color: var(--neutral-100);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.chart-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background-color: var(--color-brand-default);
+  width: 0%;
+  transition: width 1s ease-out;
+  position: relative;
+}
+
+.chart-bar-fill.is-animated {
+  width: var(--bar-value);
+}
+
+.chart-bar-fill.success { background-color: var(--success-500); }
+.chart-bar-fill.secondary { background-color: var(--color-secondary-default); }
+.chart-bar-fill.warning { background-color: var(--warning-500); }
+.chart-bar-fill.error { background-color: var(--error-500); }
+
+/* Tooltip on bar hover */
+.chart-bar-fill:hover::after {
+  content: attr(data-value);
+  position: absolute;
+  right: 0;
+  top: -28px;
+  background-color: var(--base-black);
+  color: var(--neutral-white);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ----------------------------------------
+   GROUPED BAR CHART
+   ---------------------------------------- */
+
+.chart-grouped {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: var(--space-4);
+  height: 240px;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+.chart-grouped-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.chart-grouped-bar-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 180px;
+}
+
+.chart-grouped-bar {
+  width: 24px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  background-color: var(--color-brand-default);
+  transition: height 1s ease-out;
+  height: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.chart-grouped-bar.is-animated {
+  height: var(--bar-height);
+}
+
+.chart-grouped-bar.secondary {
+  background-color: var(--color-secondary-default);
+}
+
+.chart-grouped-bar.success {
+  background-color: var(--success-500);
+}
+
+.chart-grouped-bar:hover {
+  opacity: 0.8;
+}
+
+.chart-grouped-bar:hover::after {
+  content: attr(data-value);
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--base-black);
+  color: var(--neutral-white);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.chart-grouped-label {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-caption);
+  text-align: center;
+}
+
+/* ----------------------------------------
+   CHART CARDS
+   ---------------------------------------- */
+
+.chart-card {
+  background-color: var(--color-background-surface);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.chart-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+.chart-card-title {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--color-text-high-contrast);
+}
+
+.chart-card-subtitle {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-caption);
+}
+
+.chart-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Donut stats below */
+.chart-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.chart-stat {
+  text-align: center;
+}
+
+.chart-stat-value {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--color-text-high-contrast);
+}
+
+.chart-stat-value.secondary {
+  color: var(--color-secondary-default);
+}
+
+.chart-stat-label {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-caption);
+  margin-top: var(--space-1);
+}
+
+/* ----------------------------------------
+   LINE CHART
+   ---------------------------------------- */
+
+.chart-line-container {
+  width: 100%;
+  height: 180px;
+}
+
+.chart-line-container svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* ----------------------------------------
+   AREA CHART
+   ---------------------------------------- */
+
+.chart-area-container {
+  width: 100%;
+  height: 180px;
+}
+
+.chart-area-container svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}

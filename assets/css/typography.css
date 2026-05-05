@@ -1,0 +1,157 @@
+/* ========================================
+   LABORATORIO DESIGN SYSTEM - TYPOGRAPHY
+   Font Family: Work Sans
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+body {
+  font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--color-text-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+.h1, h1 {
+  font-size: 42px;
+  line-height: 56px;
+  font-weight: 600;
+  color: var(--color-text-high-contrast);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+.h2, h2 {
+  font-size: 35px;
+  line-height: 48px;
+  font-weight: 600;
+  color: var(--color-text-high-contrast);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-4);
+}
+
+.h3, h3 {
+  font-size: 29px;
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--color-text-high-contrast);
+  margin-bottom: var(--space-3);
+}
+
+.h4, h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--color-text-high-contrast);
+  margin-bottom: var(--space-3);
+}
+
+.h5, h5 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--color-text-high-contrast);
+  margin-bottom: var(--space-2);
+}
+
+.h6, h6 {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--color-text-high-contrast);
+  margin-bottom: var(--space-2);
+}
+
+/* Subtitles */
+.subtitle1 {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--color-text-body);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.subtitle2 {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--color-text-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.subtitle3 {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--color-text-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Body */
+.body1 {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--color-text-body);
+}
+
+.body2 {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--color-text-body);
+}
+
+.body3 {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-helper);
+}
+
+/* Caption */
+.caption {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--color-text-caption);
+}
+
+/* Overline */
+.overline {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 600;
+  color: var(--color-text-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Button text */
+.button-text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--color-text-on-brand);
+  letter-spacing: 0.02em;
+}
+
+/* Helpers */
+.text-primary { color: var(--color-brand-default); }
+.text-secondary { color: var(--color-secondary-default); }
+.text-success { color: var(--success-500); }
+.text-error { color: var(--error-500); }
+.text-warning { color: var(--warning-500); }
+.text-disabled { color: var(--color-text-disabled); }
+.text-inverse { color: var(--color-text-inverse); }
+
+.fw-light { font-weight: 300; }
+.fw-regular { font-weight: 400; }
+.fw-medium { font-weight: 500; }
+.fw-semibold { font-weight: 600; }
+.fw-bold { font-weight: 700; }

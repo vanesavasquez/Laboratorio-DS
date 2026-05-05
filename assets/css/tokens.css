@@ -1,0 +1,137 @@
+:root {
+  /* ========================================
+     LABORATORIO DESIGN SYSTEM - COLOR TOKENS
+     ======================================== */
+
+  /* Primary */
+  --primary-50: #f4e2ef;
+  --primary-100: #eac5e0;
+  --primary-200: #dfa8d1;
+  --primary-300: #d48ac1;
+  --primary-400: #ca6db1;
+  --primary-500: #bf50a2;
+  --primary-600: #93367b;
+  --primary-700: #792c65;
+  --primary-800: #602350;
+  --primary-900: #461a3a;
+
+  /* Secondary */
+  --secondary-50: #f5f7ff;
+  --secondary-100: #eceffe;
+  --secondary-200: #d8e0fd;
+  --secondary-300: #9daffa;
+  --secondary-400: #748ff8;
+  --secondary-500: #4c6ef6;
+  --secondary-600: #244df4;
+  --secondary-700: #0c36e2;
+  --secondary-800: #0a2db9;
+  --secondary-900: #082391;
+  --secondary-brand-base: #c5d0fc;
+
+  /* Neutral */
+  --neutral-white: #ffffff;
+  --neutral-50: #fafafa;
+  --neutral-100: #eaeaea;
+  --neutral-200: #cfcece;
+  --neutral-300: #bab8b8;
+  --neutral-400: #a5a1a1;
+  --neutral-500: #908b8b;
+  --neutral-600: #7a7474;
+  --neutral-700: #655f5f;
+  --neutral-800: #4e4949;
+  --neutral-900: #383434;
+  --base-black: #0b0a0a;
+
+  /* Feedback */
+  --error-100: #f3bcc1;
+  --error-300: #e87883;
+  --error-500: #dc3545;
+  --error-700: #a21c29;
+
+  --success-100: #8fffd4;
+  --success-300: #1effa9;
+  --success-500: #00ad6b;
+  --success-700: #007c4d;
+
+  --warning-100: #ffffee;
+  --warning-300: #ffd65a;
+  --warning-500: #ffc107;
+  --warning-700: #b78900;
+
+  /* ========================================
+     SEMANTIC TOKENS
+     ======================================== */
+
+  /* Brand */
+  --color-brand-default: var(--primary-500);
+  --color-brand-hover: var(--primary-600);
+  --color-brand-pressed: var(--primary-700);
+  --color-brand-disabled: var(--primary-300);
+  --color-background-primary: var(--primary-50);
+  --color-border-input-dark: var(--primary-800);
+  --color-text-on-brand: var(--neutral-white);
+
+  /* Secondary */
+  --color-secondary-default: var(--secondary-500);
+  --color-secondary-hover: var(--secondary-600);
+  --color-secondary-pressed: var(--secondary-700);
+  --color-secondary-background: var(--secondary-100);
+  --color-divider-default: var(--secondary-300);
+  --color-text-on-secondary: var(--neutral-white);
+  --secondary-brand-default: var(--secondary-brand-base);
+
+  /* Neutral / Surface */
+  --color-background-page: var(--neutral-white);
+  --color-background-surface: var(--neutral-50);
+  --color-border-default: var(--neutral-300);
+
+  /* Text */
+  --color-text-disabled: var(--neutral-400);
+  --color-text-link: var(--neutral-500);
+  --color-text-caption: var(--neutral-600);
+  --color-text-placeholder: var(--neutral-600);
+  --color-text-helper: var(--neutral-700);
+  --color-text-body: var(--neutral-800);
+  --color-text-high-contrast: var(--neutral-900);
+  --color-text-inverse: var(--neutral-white);
+  --color-icon-default: var(--neutral-800);
+
+  /* Feedback */
+  --color-feedback-error-background: var(--error-100);
+  --color-feedback-error-text: var(--error-700);
+  --color-feedback-success-background: var(--success-100);
+  --color-feedback-success-text: var(--success-700);
+  --color-feedback-warning-background: var(--warning-100);
+  --color-feedback-warning-text: var(--warning-700);
+
+  /* Spacing */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(11, 10, 10, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(11, 10, 10, 0.1), 0 2px 4px -1px rgba(11, 10, 10, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(11, 10, 10, 0.1), 0 4px 6px -2px rgba(11, 10, 10, 0.05);
+  --shadow-focus: 0 0 0 3px rgba(191, 80, 162, 0.3);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+}
