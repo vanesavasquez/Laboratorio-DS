@@ -2,6 +2,8 @@
 
 Sistema de diseno completo para productos digitales. Incluye tokens de color, tipografia Work Sans, componentes interactivos, graficos y guias de uso.
 
+🔗 **Ver la pagina publicada**: [https://vanesavasquez.github.io/Laboratorio-DS/](https://vanesavasquez.github.io/Laboratorio-DS/)
+
 ## Estructura
 
 ```
@@ -47,4 +49,4 @@ Abrir `index.html` en cualquier navegador moderno. No requiere build ni dependen
 
 ---
 
-Ultima actualizacion: Mayo 2024
+Ultima actualizacion: Mayo 2026
