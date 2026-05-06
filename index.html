@@ -17,7 +17,44 @@
     <div class="container header-inner">
       <a href="#" class="header-logo">Laboratorio DS</a>
       <nav class="header-nav">
-        <a href="#fundamentos" class="is-active">Fundamentos</a>
+        <a href="#fundamentos" class="is-active" data-tooltip="Fundamentos">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.49 22 2 17.51 2 12S6.49 2 12 2s10 4.04 10 9c0 3.31-2.69 6-6 6h-1.77c-.28 0-.5.22-.5.5 0 .12.05.23.13.33.41.47.64 1.06.64 1.67A2.5 2.5 0 0 1 12 22zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8c.28 0 .5-.22.5-.5a.54.54 0 0 0-.14-.35c-.41-.46-.63-1.05-.63-1.65a2.5 2.5 0 0 1 2.5-2.5H16c2.21 0 4-1.79 4-4 0-3.86-3.59-7-8-7z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></svg>
+        </a>
+        <a href="#tipografia" data-tooltip="Tipografia">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 4v3h5v12h3V7h5V4H2zm19 5h-9v3h3v7h3v-7h3V9z"/></svg>
+        </a>
+        <a href="#iconografia" data-tooltip="Iconografia">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 16.5 4-4H8l4 4zM3 3h18v2H3V3zm0 16h18v2H3v-2zm2-4h4v2H5v-2zm0-4h4v2H5v-2zm10 4h4v2h-4v-2zm0-4h4v2h-4v-2zM5 7h4v2H5V7zm10 0h4v2h-4V7z"/></svg>
+        </a>
+        <a href="#botones" data-tooltip="Botones">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 9v6c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V9c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2zm-2 0H4v6h16V9zm-4 3c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/></svg>
+        </a>
+        <a href="#cards" data-tooltip="Cards">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 6h4v2H2V6zm0 5h4v2H2v-2zm0 5h4v2H2v-2zM7 6h15v2H7V6zm0 5h15v2H7v-2zm0 5h15v2H7v-2z"/></svg>
+        </a>
+        <a href="#formularios" data-tooltip="Formularios">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        </a>
+        <a href="#graficos" data-tooltip="Graficos">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+        </a>
+        <a href="#ilustraciones" data-tooltip="Ilustraciones">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+        </a>
+        <a href="#feedback" data-tooltip="Feedback">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>
+        </a>
+        <a href="#guia" data-tooltip="Guia de Uso">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/></svg>
+        </a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+      <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <a href="#fundamentos">Fundamentos</a>
         <a href="#tipografia">Tipografia</a>
         <a href="#iconografia">Iconografia</a>
         <a href="#botones">Botones</a>
@@ -28,11 +65,6 @@
         <a href="#feedback">Feedback</a>
         <a href="#guia">Guia de Uso</a>
       </nav>
-      <button class="mobile-menu-btn" aria-label="Menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 12h18M3 6h18M3 18h18"/>
-        </svg>
-      </button>
     </div>
   </header>
 

@@ -7,7 +7,7 @@
 
   // Smooth scroll for nav links
   function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('.header-nav a[href^="#"], .mobile-nav a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
         const targetEl = document.querySelector(targetId);
@@ -15,8 +15,18 @@
           e.preventDefault();
           targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
           // Update active nav
-          document.querySelectorAll('.header-nav a').forEach(l => l.classList.remove('is-active'));
-          this.classList.add('is-active');
+          document.querySelectorAll('.header-nav a, .mobile-nav a').forEach(l => l.classList.remove('is-active'));
+          document.querySelectorAll('.header-nav a[href="' + targetId + '"], .mobile-nav a[href="' + targetId + '"]').forEach(l => l.classList.add('is-active'));
+          // Close mobile menu
+          const mobileNav = document.getElementById('mobileNav');
+          const mobileBtn = document.getElementById('mobileMenuBtn');
+          if (mobileNav && mobileNav.classList.contains('is-open')) {
+            mobileNav.classList.remove('is-open');
+            mobileNav.setAttribute('aria-hidden', 'true');
+            if (mobileBtn) {
+              mobileBtn.setAttribute('aria-expanded', 'false');
+            }
+          }
         }
       });
     });
@@ -25,7 +35,7 @@
   // Active nav on scroll
   function initScrollSpy() {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.header-nav a[href^="#"]');
+    const navLinks = document.querySelectorAll('.header-nav a[href^="#"], .mobile-nav a[href^="#"]');
 
     function onScroll() {
       let current = '';
@@ -44,6 +54,26 @@
     }
 
     window.addEventListener('scroll', onScroll);
+  }
+
+  // Mobile menu toggle
+  function initMobileMenu() {
+    const btn = document.getElementById('mobileMenuBtn');
+    const nav = document.getElementById('mobileNav');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', function() {
+      const isOpen = nav.classList.contains('is-open');
+      if (isOpen) {
+        nav.classList.remove('is-open');
+        nav.setAttribute('aria-hidden', 'true');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        nav.classList.add('is-open');
+        nav.setAttribute('aria-hidden', 'false');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
   }
 
   // Icon search
@@ -101,6 +131,7 @@
   function init() {
     initSmoothScroll();
     initScrollSpy();
+    initMobileMenu();
     initIconSearch();
     initFormValidation();
   }
